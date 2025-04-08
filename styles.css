@@ -2,16 +2,37 @@
 
 /* setting the root colors */
 :root{
-    --black_300: #212121;
-    --shadow: #21212152;
-    --black_200: #323232;
-    --yellow: #FFB220;
-    --blue_300: #066f72;
-    --blue_200: #14FFEC;
-    --yellow_mark: #F9CF7F;
-    --section_bg: #f0f0f0;
-    --divisor: #d5d2d2;
+/* colors - visual identity */
+    --black_400: #18181A;
+    --black_300: #1B1C1E;
+    --black_200: #27282B;
 
+    --blue_300: #0065FF; 
+    --blue_200: #2B7FFF;
+    --blue_100: #6BA6FF;
+
+    --gray_300: #969696;
+    --gray_200: #D6D6D6;
+    --gray_100: #FBFBFB;
+
+    --yellow_300: #FFB121;
+    --yellow_200: #FFBE47;
+    --yellow_100: #FFD27E;
+
+/* colors - ui tokens */
+    --green_300: #188A42;
+    --green_200: #22C55E;
+    --green_100: #48CF79;
+
+    --red_300: #9A1B1B;
+    --red_200: #DC2626;
+    --red_100: #EB8181;
+
+    --shadow: #21212152;
+
+/* fonts tokens */
+    --titles_font: 'Fira Code', monospace;
+    --texts_font: 'Inter', sans-serif;
 }
 
 
@@ -44,7 +65,7 @@ textarea{
     resize: none;
 }
 mark{
-    background-color: var(--yellow);
+    background-color: var(--yellow_100);
     padding: 0 .2rem;
 }
 
