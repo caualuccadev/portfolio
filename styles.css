@@ -448,7 +448,9 @@ mark{
     justify-content: space-between;
     padding: 1rem;
     border-radius: 2rem;
-    width: 50%;
+    width: 100%;
+    max-width: 60rem;
+    min-width: 15rem;
     box-shadow: 4px 4px 6px var(--shadow);
 }
 
@@ -471,7 +473,7 @@ mark{
 
 .input_container input{
     width: 100%;
-    padding: .25rem .5rem;
+    padding: .8rem;
     border-radius: 1rem;
     border: none;
     outline: var(--yellow);
@@ -479,14 +481,16 @@ mark{
 #message_user{
     display: flex;
     width: 100%;
-    height: 6rem;
+    height: 10rem;
     overflow-y: scroll;
+    padding: .5rem;
 }
 
 form .button_primary{
     align-self: center;
     justify-self: center;
-    width: 12rem;
+    width: 70%;
+    max-width: 30rem;
 }
 
 
