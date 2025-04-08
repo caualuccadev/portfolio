@@ -56,3 +56,34 @@
     animation: typing steps(9) 6s infinite,
                 blink ease 1s infinite;
 }
+
+/* desktop items animations */
+.item_link:hover{
+    color: var(--yellow_300);
+    transition: color ease .3s;
+}
+
+.item_link:hover::after{
+    width: 100%;
+    transition: all ease .3s;
+}
+
+.item_link:not(:hover)::after{
+    width: 0;
+    transition: all ease .3s;
+}
+
+.social_desktop .bi:hover{
+    background-color: var(--yellow_300);
+    color: var(--black_400);
+    transform: scale(1.2);
+    transition: all ease .3s;
+}
+
+.social_desktop .bi:not(:hover){
+    background-color: transparent;
+    color: var(--gray_100);
+    transform: scale(1);
+    transition: all ease .3s;
+}
+

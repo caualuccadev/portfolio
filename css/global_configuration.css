@@ -111,6 +111,7 @@ mark{
     gap: .8rem;
     font-weight: 600;
     font-size: clamp(.9rem, 1rem, 1.25rem);
+    overflow: hidden;
 }
 
 .button_curriculum_download .bi{
@@ -155,3 +156,64 @@ mark{
 }
 
 
+/* header styles */
+.header_menu{
+    background-color: var(--black_400);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    width: 100%;
+}
+
+.nav_desktop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: .5rem;
+    height: 100%;
+}
+
+.nav_desktop ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 100%;
+}
+
+.item_link{
+    padding: .5rem 1rem;
+    font-size: clamp(1rem, 1.15rem, 1.2rem);
+    cursor: pointer;
+    color: var(--gray_100);
+    position: relative;}
+
+.item_link::after{
+    position: absolute;
+    content: '';
+    height: 1.5px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--yellow_300);
+}
+
+.social_desktop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.social_desktop .bi{
+    padding: .5rem;
+    font-size: clamp(1.2rem, 1.25rem, 1.3rem);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--gray_100);
+}
