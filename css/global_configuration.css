@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* setting the root colors */
+:root{
+/* colors - visual identity */
+    --black_400: #18181A;
+    --black_300: #1B1C1E;
+    --black_200: #27282B;
+
+    --blue_400: #031839;
+    --blue_300: #0065FF; 
+    --blue_200: #2B7FFF;
+    --blue_100: #6BA6FF;
+
+    --gray_300: #969696;
+    --gray_200: #D6D6D6;
+    --gray_100: #FBFBFB;
+
+    --yellow_300: #FFB121;
+    --yellow_200: #FFBE47;
+    --yellow_100: #FFD27E;
+
+/* colors - ui tokens */
+    --green_300: #188A42;
+    --green_200: #22C55E;
+    --green_100: #48CF79;
+
+    --red_300: #9A1B1B;
+    --red_200: #DC2626;
+    --red_100: #EB8181;
+
+    --shadow: #21212152;
+
+/* fonts tokens */
+    --titles_font: 'Fira Code', monospace;
+    --texts_font: 'Inter', sans-serif;
+}
+
+
+/* reseting defaults and setting global components */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1,h2,h3,h4, button { font-family: var(--titles_font)}
+
+a, p, span { font-family: var(--texts_font);}
+
+body{
+    background: var(--black_300);
+    color: var(--gray_100) }
+
+ul{ list-style-type: none;}
+
+a{ text-decoration: none;}
+
+
+textarea{ resize: none; }
+
+mark{
+    background-color: var(--yellow_200);
+    padding: 0 .2rem;
+}
+
+.button_primary{
+    background-color: var(--yellow_300);
+    color: var(--black_400);
+    border: none;
+    cursor: pointer;
+    padding: .8rem 0;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-family: var(--texts_font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: .9rem;
+}
+.icon_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_cv_container{
+    padding: .5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.button_curriculum_download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border: 1.5px solid var(--yellow_300);
+    color: var(--yellow_300);
+    background-color: transparent;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    font-weight: 600;
+    font-size: clamp(.9rem, 1rem, 1.25rem);
+}
+
+.button_curriculum_download .bi{
+    font-size: clamp(1rem, 1.15rem, 1.25rem);
+
+}
+
+
+/* header styles */
+.header_menu{
+    background-color: var(--black_400);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    width: 100%;
+}
+
+.name_logo{
+    font-family: var(--texts_font);
+}
+
