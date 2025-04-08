@@ -3,26 +3,17 @@
 /* key frames animations */
 
 @keyframes typing {
-    0%{
-        width: 100%;
-        border-left: 1px solid none;
-    }
-    25%{
-        width: 0;
-        border-left: 1px solid var(--yellow);
-    }
-    50%{
-        width: 0;
-        border-right: 1px solid none;
-    }
-
-    100%{
-        width: 100%;
-        border-left: 1px solid var(--yellow);
-    }
+    0%{ width: 100%; }
+    25%{ width: 0; }
+    50%{ width: 0; }
+    100%{ width: 100%; }
     
 }
 
+@keyframes blink{
+    from{ border-left: 1.5px solid transparent;}
+    to {border-left: 1.5px solid var(--gray_200);}
+}
 @keyframes pulsing{
     0%{
         transform: scale(1);
@@ -35,5 +26,33 @@
     }
 }
 
+@keyframes logo_animation_entry{
+    0%{
+        content: '';
+    }
+
+    100%{
+        content: ''
+    }
+}
 
 
+
+
+
+
+/* logo animations */
+.aside_logo:hover{
+    color: var(--yellow_300);
+    transition: all ease-in-out .3s;
+}
+
+.aside_logo:hover .thin_text{
+    color: var(--blue_300);
+    transition: all ease-in-out .3s;
+}
+
+.thin_text::after{
+    animation: typing steps(9) 6s infinite,
+                blink ease 1s infinite;
+}

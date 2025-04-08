@@ -1,0 +1,13 @@
+@import url(global_configuration.css);
+
+
+/* header styles */
+.header_menu{
+    background-color: var(--black_400);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    width: 100%;
+}
+
