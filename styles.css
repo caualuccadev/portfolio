@@ -7,6 +7,7 @@
     --black_300: #1B1C1E;
     --black_200: #27282B;
 
+    --blue_400: #031839;
     --blue_300: #0065FF; 
     --blue_200: #2B7FFF;
     --blue_100: #6BA6FF;
@@ -38,7 +39,7 @@
 
 
 
-/* resetando defaults */
+/* reseting defaults and setting global components */
 *{
     margin: 0;
     padding: 0;
@@ -46,37 +47,35 @@
 }
 
 
-h2,h3,h4{
-    font-family: 'Fira Coda', monospace
-}
+h1,h2,h3,h4 { font-family: var(--titles_font)}
 
-ul{
-    list-style-type: none;
-}
+a, p, span { font-family: var(--texts_font);}
+
 body{
-    color: var(--black_300);
-}
-a{
-    color: var(--black_300);
-    text-decoration: none;
-}
+    background: var(--black_300);
+    color: var(--gray_100) }
 
-textarea{
-    resize: none;
-}
+ul{ list-style-type: none;}
+
+a{ text-decoration: none;}
+
+
+textarea{ resize: none; }
+
 mark{
-    background-color: var(--yellow_100);
+    background-color: var(--yellow_200);
     padding: 0 .2rem;
 }
 
 .button_primary{
-    background-color: var(--yellow);
+    background-color: var(--yellow_300);
+    color: var(--black_400);
     border: none;
     cursor: pointer;
     padding: .8rem 0;
     border-radius: 1rem;
     font-weight: 600;
-    font-family: 'poppins', sans-serif;
+    font-family: var(--texts_font);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,12 +91,12 @@ mark{
 
 /* header styles */
 .header_menu{
-    background-color: var(--section_bg);
+    background-color: var(--black_400);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 3rem;
-    font-family: 'Poppins', sans-serif;
+    width: 100%;
 }
 
 .aside_menu, .aside_footer{
@@ -105,10 +104,10 @@ mark{
     align-items: center;
     justify-content: center;
     gap: .5rem;
+    color: var(--gray_100);
 }
 
 .aside_menu .bi-braces{
-    color: var(--black_200);
     font-size: clamp(1.3rem, 1.5rem, 1.7rem);
     display: flex;
     place-content: center;
@@ -117,7 +116,6 @@ mark{
 
 .aside_menu h1{
     font-size: clamp(1rem, 1.2rem, 1.4rem);
-    color: var(--black_200);
 }
 
 .thin_text{
@@ -135,7 +133,8 @@ mark{
 }
 
 .menu_button{
-    font-size: 1.4rem;
+    font-size: 2rem;
+    color: var(--gray_100);
     display: flex;
     padding: .5rem;
     border-radius: 50%;
@@ -144,7 +143,7 @@ mark{
 }
 
 .menu_mobile_container{
-    background-color: var(--section_bg);
+    background-color: var(--black_400);
     position: absolute;
     right: -50%;
     top: -40%;
@@ -156,16 +155,16 @@ mark{
     gap: .5rem;
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
-    border: 1px solid var(--divisor);
+    border: 1px solid var(--black_200);
     box-shadow: -2px 2px 6px var(--shadow);
     transform: translateX(300px);
     z-index: 1;
     visibility: hidden;
-    transition: all ease-in-out 1s;
+    transition: all ease-in-out .5s;
 }
 
 .menu_mobile_item{
-    border-bottom: 1px solid var(--divisor) ;
+    border-bottom: 1px solid var(--black_200) ;
     width: 100%;
     cursor: pointer;
     padding: .5rem 0 .5rem .5rem;
@@ -186,6 +185,7 @@ mark{
     align-items: center;
     border-radius: 50%;
     border: 1px solid transparent;
+    color: var(--blue_300);
 }
 
 .footer_menu_mobile{
@@ -200,7 +200,7 @@ mark{
 
 .footer_menu_mobile .bi{
     cursor: pointer;
-    color: var(--black_200);
+    color: var(--blue_300);
     padding: .5rem;
     border-radius: 50%;
     display: flex;
@@ -234,6 +234,7 @@ mark{
 
 .menu_desktop_item a{
     position: relative;
+    color: var(--gray_100);
 }
 
 
@@ -242,7 +243,7 @@ mark{
     display: flex;
     width: 0;
     height: 2px;
-    background-color:white;
+    background-color: var(--blue_100);
     content: '';
     left: 0;
     bottom: 0;
@@ -257,6 +258,7 @@ mark{
     padding: 1rem;
     font-size: 1.4rem;
     margin-left: 4rem;
+    color: var(--gray_100);
 }
 
 .menu_icon{
@@ -266,6 +268,7 @@ mark{
     padding: .5rem;
     border-radius: 50%;
     cursor: pointer;
+    color: var(--gray_100);
 }
 
 
@@ -302,23 +305,9 @@ mark{
     font-size: clamp(1.3rem, 1.5rem, 1.7rem);
     font-weight: 600;
 }
-.animation_h2{
-    font-family: 'Fira Code', monospace;
-    font-weight: 600;
-    position: relative;
-    border-bottom: 2px solid var(--yellow);
-}
-.animation_h2::after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 120%;
-    background-color: white;
-    right: 0;
-}
+
 
 .about_text{
-    font-family: 'Poppins';
     font-weight: 500;
     font-size: .9rem;
     line-height: 1.6rem;
