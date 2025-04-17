@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cauã Lucca</title>
+
+    <link rel="stylesheet" href="css/global_configuration.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="main.js" defer></script>
+    
+</head>
+<body>
+    <header class="header_menu" id="home">
+        <aside class="aside_logo">
+            <i class="bi bi-braces" aria-hidden="true"></i>
+            <h1 aria-label="Cauã Lucca Desenvolvedor" class="name_logo">caualucca.<span class="thin_text">developer</span></h1>
+        </aside>
+
+        <nav class="nav_mobile">
+            <i class="bi bi-list menu_button button" role="button" aria-label="Abrir menu" id="menu_button"></i>
+
+            <ul class="menu_mobile_container">
+                <li class="menu_mobile_close button"><i class="bi bi-x close_icon"></i></li>
+                <li class="menu_mobile_item button"><a href="#home">Início</a></li>
+                <li class="menu_mobile_item button"><a href="projects">Projetos</a></li>
+                <li class="menu_mobile_item button"><a href="#contact">Contato</a></li>
+
+                <footer class="footer_menu_mobile">
+                    <i class="bi bi-github menu_icon button"></i>
+                    <i class="bi bi-linkedin menu_icon button"></i>
+                    <button class="button_curriculum_download">
+                        Baixar <span aria-label="Currículo">CV</span>
+                        <i class="bi bi-download"></i>
+                    </button>
+                </footer>
+            </ul>
+        </nav>
+
+        <nav class="nav_desktop">
+            <ul>
+                <li class="menu_desktop_item button"><a href="#home" class="item_link">Início</a></li>
+                <li class="menu_desktop_item button"><a href="#projects" class="item_link">Projetos</a></li>
+                <li class="menu_desktop_item button"><a href="contact" class="item_link">Contato</a></li>
+            </ul>
+            <div class="social_desktop">
+                <i class="bi bi-github menu_icon menu_icon_desktop button"></i>
+                <i class="bi bi-linkedin menu_icon menu_icon_desktop button"></i>
+            </div>
+        </nav>
+
+        <aside class="button_cv_container">
+            <button class="button_curriculum_download">
+                <p>Baixar <span aria-label="Currículo">CV</span></p>
+                <i class="bi bi-download"></i>
+            </button>
+        </aside>
+    </header>
+
+    <main class="main_section">
+
+        <section class="intro_section">
+            <section class="intro_text">
+                <h2 class="hero_title">
+                    Transformando ideias em soluções visuais modernas e funcionais.
+                </h2>
+                <p class="dev_text">Desenvolvedor <span class="hero_text_changes"></span></p>
+            </section>
+
+            <section class="asset_intro_animation">
+
+            </section>
+        </section>
+
+
+        <!-- 
+        <section class="about">
+
+            <section class="about_me">
+                <h2 class="section_title">Cauã Lucca Guimarães</h2>
+                <div class="animation_h2"><span class="animation_dev">Desenvolvedor Front-End</span></div>
+
+                <p class="about_text">Olá! Sou Cauã Lucca Guimarães, <mark>estudante de Engenharia de Software</mark> na Unijorge desde fevereiro de 2025.
+                    Minha jornada começou no design de redes sociais, onde desenvolvi habilidades em comunicação visual e planejamento de conteúdo — experiências que despertaram meu interesse por desenvolvimento web.
+                    Hoje, foco no aprendizado contínuo de HTML, CSS e JavaScript, com o objetivo de me tornar um <b>Engenheiro de Aplicações Web</b>. Tenho um interesse especial em criar soluções para ONGs e projetos sociais, usando a tecnologia de forma acessível, inclusiva e com propósito.</p>
+                
+            </section>
+
+            <section class="skills">
+                <h3 class="content_title">Minhas Habilidades</h3>
+                <ul class="skills_container">
+                    <li class="skill_item">
+                        <i class="bi bi-code"></i>
+                        <p>HTML</p>
+                    </li>
+
+                    <li class="skill_item">
+                        <i class="bi bi-code"></i>
+                        <p>CSS</p>
+                    </li>
+                    <li class="skill_item">
+                        <i class="bi bi-code"></i>
+                        <p>JavaScript</p>
+                    </li>
+                    <li class="skill_item">
+                        <i class="bi bi-app-indicator"></i>
+                        <p>Figma</p>
+                    </li>
+                    <li class="skill_item">
+                        <i class="bi bi-columns-gap"></i>
+                        <p>UI e UX</p>
+                    </li>
+                    <li class="skill_item">
+                        <i class="bi bi-lightbulb"></i>
+                        <p>Criatividade</p>
+                    </li>
+                    <li class="skill_item">
+                        <i class="bi bi-palette"></i>
+                        <p>Identidade Visual</p>
+                    </li>
+                </ul>
+            </section>
+
+        </section>
+
+        <section id="projects">
+            <h2 class="section_title">Cada linha de código, um desafio superado</h2>
+
+            <section class="projects_cards_container">
+                <div class="project_card_container">
+                    <div class="card_container">
+                        <header class="header_card">
+                            <span class="number_card">1</span>
+                            <h3 class="card_title">Drª Viviane</h3>
+                        </header>
+
+                        <p class="card_description">Site desenvolvido para Drª Viviane Guimarães, fisioterapeuta neurofuncional. O objetivo do site é 
+                            centralizar as principais informações sobre sua vida profissional e os seus serviços, facilitando a comunicação com seus clientes
+                            e alunos.</p>
+
+                        <button class="button_primary button_site_one">Ver site<i class="bi bi-chevron-right icon_button"></i></button>
+                    </div>
+                </div>
+
+                <div class="card_container">
+                    <header class="header_card">
+                        <span class="number_card">2</span>
+                        <h3 class="card_title">MarAzul</h3>
+                    </header>
+
+                    <p class="card_description">Site desenvolvido para uma ONG Fictícia. O objetivo é aumentar a presença digital do projeto, apresentar
+                        suas ações sociais e adquirir novos voluntários. </p>
+
+                    <button class="button_primary button_site_two">Ver site<i class="bi bi-chevron-right icon_button"></i></button>
+
+
+                </div>
+            </section>
+        </section>
+
+
+        <section id="contact">
+            <h2 class="section_title">Sua menssagem, minha próxima missão.</h2>
+            <section class="form_container">
+                <form action="" method="get">
+
+                    <label for="name" class="input_container">
+                        <p class="label_text">Seu nome:</p>
+                        <input type="text" name="name" id="name_user">
+                    </label>
+
+                    <label for="email" class="input_container">
+                        <p class="label_text">Seu email: </p>
+                        <input type="email" name="email" id="email_user">
+                    </label>
+
+                    <label for="message" class="input_container">
+                        <p class="input_label_text">Escreva sua menssagem:</p>
+                        <textarea name="message" id="message_user" cols="30"></textarea>
+                    </label>
+
+                    <button class="button_primary button">Enviar</button>
+                </form>
+            </section>
+        </section>
+
+    
+    </main>
+
+    <footer class="footer_website">
+        <aside class="aside_footer">
+            <i class="bi bi-braces" aria-hidden="true"></i>
+            <h1 aria-label="Cauã Lucca Desenvolvedor">caualucca. <span class="thin_text">dev</span></h1>
+        </aside>
+
+        <ul class="links_nav_footer">
+            <li class="links_title">Navegação</li>
+            <li class="link_item_footer button"><a href="#home">Início</a></li>
+            <li class="link_item_footer button"><a href="#projects">Projetos</a></li>
+            <li class="link_item_footer button"><a href="#contact">Contato</a></li>
+            <li class="link_item_footer button"><a href="#">Github</a></li>
+            <li class="link_item_footer button"><a href="#">Linkedin</a></li>
+        </ul>
+
+        <ul class="links_others_footer">
+            <li class="links_title">Políticas e Comunidade</li>
+            <li class="link_item_footer button"><a href="#">Política de Privacidade</a></li>
+            <li class="link_item_footer button"><a href="">Política de Cookies</a></li>
+            <li class="link_item_footer button"><a href="">Dúvidas</a></li>
+        </ul>
+    </footer>
+
+    -->
+
+    
+</body>
+</html>
