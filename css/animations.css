@@ -1,0 +1,147 @@
+@import url(style.css);
+
+/* global components animations */
+.button:hover{
+    background-color: var(--blue_hover);
+    transition: ease-in-out background-color .15s;
+}
+.button_content{
+    display: flex;
+    transform: scale(1);
+}
+
+.button:hover  .button_content{
+    transform: scale(.93);
+    color: var(--blue_200);
+    transition: ease-in-out transform color .15s;
+}
+
+.menu_button:hover{
+    color: var(--blue_200);
+    transform: scale(.95);
+    transition: ease-in-out transform scale .2s
+}
+
+.button_primary:hover{
+    background-color: var(--blue_200);
+    transform: scale(.9);
+    transition: all ease-in-out .2s;
+}
+
+.button_primary:not(:hover){
+    background-color: var(--yellow);
+    transform: scale(1);
+    transition: all ease-in-out .2s;
+
+}
+
+
+
+
+/* menu desktop components animations */
+.button_shrink_menu:hover{
+    transform: scale(1.1);
+    color: var(--blue_200);
+    background-color: var(--blue_400);
+    transition: ease-in-out transform .2s,
+                ease-in-out color .2s,
+                ease-in-out background-color .2s;
+}
+
+.button_shrink_menu:not(:hover){
+    transform: scale(1.1);
+    color: white;
+    background-color: var(blue_300);
+    transition: ease-in-out transform .2s,
+                ease-in-out color .2s,
+                ease-in-out background-color .2s;
+}
+
+.link_menu_desktop:hover{
+    color: var(--blue_200);
+    transition: ease-in-out color .2s;
+
+}
+
+.link_menu_desktop:not(:hover){
+    color: var(--text_button_disable);
+    transition: ease-in-out color .2s;
+}
+
+
+
+/* */
+.animation_dev::after{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 0;
+    content: '';
+    background-color: var(--blue_300);
+    right: 0%;
+    top: 0;
+    border-left: 1px solid white;
+    animation: typing 6s steps(22) infinite;
+}
+
+
+
+@keyframes typing{
+    0%{
+        width: 0;
+    }
+    25%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    75%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+
+
+}
+
+
+
+.skill_item:hover{
+    transform: perspective(30);
+    transform: rotateZ(10deg);
+    transform: rotate3d(2deg);
+    transition: all ease-in-out .3s;
+}
+
+.skill_item:not(:hover){
+    transform: perspective(0);
+    transform: rotateZ(0deg);
+    transform: rotate3d(0deg);
+    transition: all ease-in-out .3s;
+}
+
+.experience_item:hover{
+    background-color: var(--blue_hover);
+    border: 2px solid var(--blue_300);
+    transition: all ease-in-out .2s;
+}
+.experience_item:not(:hover){
+    background-color: var(--blue_300);
+    transition: all ease-in-out .2s;
+}
+
+
+.project_card_container:hover{
+    background-color: var(--blue_hover);
+    transform: scale(1.02);
+    transition: all ease-in-out .3s;
+}
+
+.project_card_container:not(:hover){
+    background-color: var(--blue_300);
+    transform: scale(1);
+    transition: all ease-in-out .3s;
+}
+

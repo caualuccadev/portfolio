@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de um Desenvolvedor Front-End">
+    <meta name="author" content="Cauã Lucca Guimarães">
+    <meta name="keywords" content="desenvolvimento web, portfólio, engenharia de software, front end">
+
+    <meta property="og:title" content="Cauã Lucca - Portfólio">
+    <meta property="og:description" content="Portfólio de desenvolvimento web e engenharia de software.">
+
+    <link rel="icon" href="" type="image/x-icon">
+
+
+    <!-- link to bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css" preload>
+
+    <script src="main.js" defer></script>
+
+    <title>Cauã Lucca</title>
+</head>
+<body>
+
+    <!-- header for small screens  -->
+     <header class="header_mobile">
+        <aside class="logo_name">
+            <i class="bi bi-braces" aria-hidden="true"></i>
+            <h1 aria-label="Cauã Lucca Desenvolvedor">caualucca. <span class="thin_text">dev</span></h1>
+        </aside>
+
+        <nav class="menu_mobile">
+            <i class="bi bi-list menu_button button" role="button" aria-label="Abrir menu"></i>
+
+            <ul class="menu_mobile_open">
+                <li class="menu_mobile_close button" role="button" aria-label="Fechar menu">
+                    <i class="bi bi-x button_content"></i>
+                </li>
+
+                <li class="menu_mobile_item button" role="button" aria-label="Início do portfólio">
+                    <i class="bi bi-house button_content"></i>
+                    <p class="button_content">Início</p>
+                </li>
+
+                <li class="menu_mobile_item button" role="button" aria-label="Meus projetos">
+                    <i class="bi bi-collection button_content"></i>
+                    <p class="button_content">Projetos</p>
+                </li>
+
+                <li class="menu_mobile_item button" role="button" aria-label="Contato">
+                    <i class="bi bi-chat-square button_content"></i>
+                    <p class="button_content">Contato</p>
+                </li>
+
+                <details class="submenu_area" aria-expanded="false">
+                    <summary class="menu_mobile_item button button_submenu" role="button" aria-label="Abrir opções de configuração">
+                        <i class="bi bi-gear button_content"></i>
+                        <p class="button_content">Configurações</p>
+                        <i class="bi bi-chevron-down button_content"></i>
+                    </summary>
+
+                    <ul class="submenu_items" aria-labelledby="Opções de configuração">
+                        <li class="menu_mobile_item button" id="theme_button" role="button" aria-label="Escolher tema">
+                            <aside class="submenu_text">
+                                <i class="bi bi-moon button_content"></i>
+                                <p class="button_content">Tema escuro:</p>
+                                <p id="theme_status" class="button_content">Ativado</p>
+                            </aside>
+                            <label for="theme_choice" class="submenu_text">
+                                <input type="checkbox" name="theme_choice" id="theme_choice" aria-valuetext="Ativado" hidden>
+                            </label>
+                            
+                        </li>
+
+                        <li class="menu_mobile_item button" id="brightness_button" role="button" aria-label="Ativar alto contraste">
+                            <aside class="submenu_text">
+                                <i class="bi bi-brightness-high button_content"></i>
+                                <p class="button_content">Alto contraste:</p>
+                                <p id="brightness_status" class="button_content status_menu">Desativado</p>
+                            </aside>
+                            <label for="theme_choice" class="submenu_text">
+                                <input type="checkbox" name="brightness_choice" id="brightness_choice" aria-valuetext="Desativado" hidden>
+                            </label>
+                            
+                        </li>
+
+                        <li class="menu_mobile_item button" role="button" aria-label="Tire suas dúvidas">
+                            <i class="bi bi-question-circle button_content"></i>
+                            <p class="button_content button_text">Dúvidas</p>
+                        </li>
+
+                        <li class="menu_mobile_item button" role="button" aria-label="Acessar política de uso do site">
+                            <i class="bi bi-file-text button_content"></i>
+                            <p class="button_content">Políticas</p>
+                        </li>
+                    </ul>
+                </details>
+            </ul>
+        </nav>
+
+     </header>
+
+    <div class="bg_menu_opned" aria-hidden="true">
+        <!-- essa div vai aparecer quando o menu mobile for aberto.
+            o fundo ficará borrado para dar mais foco ao menu. -->
+    </div>
+
+
+    <!-- nav for bigger screens //  the header wont show here -->
+
+    <nav class="bigger_screen_nav">
+        <header class="bigger_header">
+            <i class="bi bi-braces menu_icon" aria-hidden="true"></i>
+            <h1 aria-label="Cauã Lucca Desenvolvedor" class="menu_text">caualucca. <span class="thin_text">dev</span></h1>
+        </header>
+
+        <ul class="bigger_menu">            
+            <section class="navigation_area" aria-labelledby="Área de navegação do site">
+                <li class="menu_desktop_item button" role="button" aria-label="Início do portfólio">
+                    <i class="bi bi-house button_content menu_icon"></i>
+                    <p class="button_content button_text menu_text">Início</p>
+                </li>
+
+                <li class="menu_desktop_item button" role="button" aria-label="Meus projetos">
+                    <i class="bi bi-collection button_content menu_icon"></i>
+                    <p class="button_content button_text menu_text">Projetos</p>
+                </li>
+
+                <li class="menu_desktop_item button" role="button" aria-label="Entre em contato">
+                    <i class="bi bi-chat-square button_content menu_icon"></i>
+                    <p class="button_content button_text menu_text">Contato</p>
+                </li>
+            </section>
+
+            <section class="settings_area">
+                <li class="menu_desktop_item button" role="button" aria-label="Tire suas dúvidas">
+                    <i class="bi bi-question-circle button_content menu_icon"></i>
+                    <p class="button_content button_text menu_text">Dúvidas</p>
+                </li>
+
+                <li class="menu_desktop_item button" id="button_theme" role="button" aria-label="Alterar tema do site">
+                    <i class="bi bi-moon button_content menu_icon"></i>
+                    <p class="button_content menu_text">Tema escuro:</p>
+
+                    <div class="switch_button_theme toggle_button" role="switch" aria-roledescription="Botão para alternar entre modo claro e escuro">
+                        <div class="switch_theme_bg toggle_bg"></div>
+                        <div class="switch_theme_circle toggle_circle"></div>
+                    </div>
+                </li>
+
+                <li class="menu_desktop_item button button_brightness" role="button" aria-label="Alterar tema do site">
+                    <i class="bi bi-brightness-high button_content menu_icon"></i>
+                    <p class="button_content menu_text">Alto Contraste:</p>
+
+                    <div class="switch_button_brightness toggle_button" role="switch" aria-roledescription="Botão para alternar entre modo claro e escuro">
+                        <div class="switch_brightness_bg toggle_bg"></div>
+                        <div class="switch_brightness_circle toggle_circle"></div>
+                    </div>
+                </li>
+            </section>
+
+            <section class="politics_area">
+                <li class="link_text"><a href="" class="link_menu_desktop">Política de Privacidade</a></li>
+                <li class="link_text"><a href="" class="link_menu_desktop">Política de Cookies</a></li>
+                <span id="teste">Testando</span>
+            </section>
+        </ul>
+    </nav>
+
+
+
+    <main class="main_content">
+
+        <section class="about_section main_section">
+            <section class="my_history about_component">
+                
+                <section class="history_content about_component">
+                    <header class="header_my_history">
+                        <!--<h2 class="hero_text">Transformando <span class="h2_yellow">ideias</span> em <span class="h2_blue">realidade</span></h2>-->
+                        <h2 class="h2_myName">Cauã Lucca Guimarães <span class="animation_dev">Desenvolvedor Front-End</span></h2>
+                    </header>
+                    <section class="text_section">
+                        <p>
+                            Olá! Sou Cauã Lucca Guimarães, <mark>estudante de Engenharia de Software</mark> na Unijorge desde fevereiro de 2025.
+                            Minha jornada começou no design de redes sociais, onde desenvolvi habilidades em comunicação visual e planejamento de conteúdo — experiências que despertaram meu interesse por desenvolvimento web.
+                            Hoje, foco no aprendizado contínuo de HTML, CSS e JavaScript, com o objetivo de me tornar um <span class="blue_text">Engenheiro de Aplicações Web</span>. Tenho um interesse especial em criar soluções para ONGs e projetos sociais, usando a tecnologia de forma acessível, inclusiva e com propósito.
+                        </p>
+                    </section>
+                    
+                </section>
+
+                <section class="my_skills about_component">
+                    <section class="skills_set">
+                        <h4 class="skills_h4">Minhas Habilidades</h4>
+                        <ul class="skills_list">
+                            <li class="skill_item">
+                                <i class="bi bi-code"></i>
+                                <p>HTML</p>
+                            </li>
+                            <li class="skill_item">
+                                <i class="bi bi-code"></i>
+                                <p>CSS</p>
+                            </li>
+                            <li class="skill_item">
+                                <i class="bi bi-code"></i>
+                                <p>JavaScript</p>
+                            </li>
+                            <li class="skill_item">
+                                <i class="bi bi-columns-gap"></i>
+                                <p>UI e UX</p>
+                            </li>
+                            <li class="skill_item">
+                                <i class="bi bi-app-indicator"></i>
+                                <p>Figma</p>
+                            </li>
+                            <li class="skill_item">
+                                <i class="bi bi-lightbulb"></i>
+                                <p>Criatividade</p>
+                            </li>
+                            <li class="skill_item">
+                                <i class="bi bi-palette"></i>
+                                <p>Identidade Visual</p>
+                            </li>
+                        
+                        </ul>
+                    </section>
+                </section>
+            </section>
+
+
+
+             <section class="experience_section">
+                    <h4 class="title_experience">Experiências</h4>
+                    <ul class="experience_list">
+                        <li class="experience_item">
+                            <aside>
+                                <p class="year">2017 até 2024</p>
+                            </aside>
+                            <section class="experience_text">
+                                <h4>Designer Digital</h4>
+                                <p>Atuação em criação de conteúdo estratégico e visuais atrativos para aumentar engajamento.</p>
+                                <details>
+                                    <summary>Habilidades Aprendidas <i class="bi bi-chevron-down"></i></summary>
+                                    <ul>
+                                        <li class="habilities_item">Design para publicações</li>
+                                        <li class="habilities_item">Phoshop e Figma</li>
+                                        <li class="habilities_item">Análise de tendências</li>
+                                        <li class="habilities_item">Organização e planejamento de pautas</li>
+                                    </ul>
+                                </details>
+                            </section>
+                        </li>
+                        <li class="experience_item">
+                            <aside>
+                                <p class="year">2022 até 2023</p>
+                            </aside>
+                            <section class="experience_text">
+                                <h4>Comunicador Social</h4>
+                                <p>Voluntário como comunicador social para redes sociais do Projeto Transpor.</p>
+                                <details>
+                                    <summary>Habilidades Aprendidas <i class="bi bi-chevron-down"></i></summary>
+                                    <ul>
+                                        <li class="habilities_item">Design para publicações</li>
+                                        <li class="habilities_item">Design e identidade visual de campanhas</li>
+                                        <li class="habilities_item">Participação ativa em decisões da equipe</li>
+                                        <li class="habilities_item">Organização e planejamento de pautas</li>
+                                    </ul>
+                                </details>
+                            </section>
+                        </li>
+                        <li class="experience_item">
+                            <aside>
+                                <p class="year">2025 - hoje</p>
+                            </aside>
+                            <section class="experience_text">
+                                <h4>Desenvolvedor Front-End</h4>
+                                <p>Atuação em criação e hospedagem de sites.</p>
+                                <details>
+                                    <summary>Habilidades Aprendidas <i class="bi bi-chevron-down"></i></summary>
+                                    <ul>
+                                        <li class="habilities_item">Desenvolvimento Web</li>
+                                        <li class="habilities_item">Design de Interface e Experiência do Usuário</li>
+                                        <li class="habilities_item">Layouts Responsivos</li>
+                                        <li class="habilities_item">Acessibilidade</li>
+                                    </ul>
+                                </details>
+                            </section>
+                        </li>
+                    </ul>
+                </section>
+
+               
+        </section>
+
+        <section class="projects_section main_section">
+            <h2 class="title_section">Cada linha de código, um desafio superado</h2>
+
+            <section class="project_container">
+                <section class="project_card_container">
+                    <header class="project_card_header">
+                        <i class="bi bi-1-circle-fill card_number"></i>
+                    </header>
+
+                    <main class="project_card_content">
+                        <h3 class="project_card_title">Drª Viviane</h3>
+                        <p class="project_card_description">Site desenvolvido para Drª Viviane Guimarães, fisioterapeuta neurofuncional. O objetivo do site é 
+                            centralizar as principais informações sobre sua vida profissional e os seus serviços, facilitando a comunicação com seus clientes
+                            e alunos.
+                        </p>
+
+                        <button class="button_primary button_card">Ver site</button>
+                    </main>
+                </section>
+
+                <section class="project_card_container">
+                    <header class="project_card_header">
+                        <i class="bi bi-2-circle-fill card_number"></i>
+                    </header>
+
+                    <main class="project_card_content">
+                        <h3 class="project_card_title">Mar Azul</h3>
+                        <p class="project_card_description">Site desenvolvido para uma ONG Fictícia. O objetivo é aumentar a presença digital do projeto, apresentar
+                            suas ações sociais e adquirir novos voluntários. 
+                        </p>
+
+                        <button class="button_primary button_card">Ver site</button>
+                    </main>
+                </section>
+            </section>
+            
+        </section>
+
+        
+    </main>
+
+
+    
+</body>
+</html>

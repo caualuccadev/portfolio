@@ -1,0 +1,564 @@
+/* importing google fonts: Poppins and Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* setting the root colors */
+:root{
+    --blue_200: #02FDA1;
+    --blue_300: #0A192D;
+    --blue_400: #011023;
+    --blue_hover: #01102364;
+    --yellow_mark: #F9CF7F;
+    --yellow: #FFB220;
+    --white: #FFFFFF;
+    --button_disable_bg: #E6E3DE;
+    --text_button_disable: #7A7C80;
+    --icon_disable: #7A7C80;
+    --section_white_bg: #a7a7a7;
+    --body_white_bg: #EFEFEF;
+    --divisor_menu_gray: #c9c6c623;
+}
+
+/* reseting defaults */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol { list-style-type: none; }
+
+a{ text-decoration: none;}
+
+
+
+/* setting the components */
+body{
+    background-color: var(--blue_400);
+    color: var(--white);
+    position: relative;
+    overflow-x: hidden;
+}
+
+summary{
+    list-style-type: none;
+}
+
+h2,h3,h4{ font-family: 'Fira Code', monospace}
+p{font-family: 'Poppins', Arial, Helvetica, sans-serif;}
+.button{
+    font-family: 'Poppins', Arial, Helvetica;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: .8rem;
+    gap: .8rem;
+    border: none;
+    font-size: clamp(.9rem, 1vw, 1rem);
+}
+
+mark{
+    color: var(--blue_300);
+background-color: var(--yellow_mark);}
+
+.blue_text{ color: var(--blue_200);}
+
+
+
+.menu_button{
+    font-size: clamp(1.3rem, 1.5rem, 1.7rem);
+    display: flex;
+}
+
+.button_primary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--yellow);
+    color: var(--blue_400);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    width: 10rem;
+    cursor: pointer;
+}
+ 
+
+
+
+
+
+/* setting the header */
+.header_mobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .logo_name{
+        display: flex;
+        align-items: center;
+        font-family: 'Poppins', Arial, Helvetica;
+        font-size: clamp(.6rem, .8rem, 1rem);
+        gap: .2rem;
+        padding: .5rem 1rem;
+        cursor:default;
+    }
+
+        .logo_name  .bi-braces{
+            font-size: clamp(1.3rem, 1.5rem, 1.7rem);
+            color: var(--yellow);
+            display: flex;
+            place-items: center;
+        }
+
+        .thin_text{
+            font-family:'Fira Code', 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+            font-weight: 400;
+        }
+    
+    .menu_mobile{
+        display: flex;
+        place-items: center;
+        padding: .5rem 1rem;
+        position: relative;
+        
+    }
+
+        .menu_mobile_open{
+            display: flex;
+            opacity: 0%;
+            background-color: var(--blue_300);
+            flex-direction: column;
+            position: absolute;
+            top: -2%;
+            right: -2%;
+            transform: translateX(400px);
+            width: 60vw;
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+            z-index: 1;
+            transition: ease-in-out transform 1s;
+        }
+
+            .menu_mobile_open.enable{
+                opacity: 100%;
+                transform: translateX(0px);
+                transition: ease-in-out transform 1s;
+            }
+
+
+            .menu_mobile_close{
+                font-size: clamp(1.5rem, 1.7rem, 1.9rem);
+                display: flex;
+                place-content: end;
+                padding: .5rem 1rem;
+            }
+
+            .menu_mobile_item{font-weight: 300;}
+
+            .status_menu{color: var(--text_button_disable);}
+
+            .submenu_text{
+                display: flex;
+                align-items: center;
+                gap: .8rem;
+            }
+
+            .submenu_items{
+                padding-left: 1.2rem;
+            }
+.bg_menu_opned{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--blue_hover);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    top: 0;
+    
+
+}
+
+
+/*  setting the menu navigation for bigger screens sizes */
+.bigger_screen_nav{
+    background-color: var(--blue_300);
+    display: flex;
+    place-items: start;
+    flex-direction: column;
+    height: 100vh;
+    width: 15rem;
+    position: fixed;
+    left: 0;
+    overflow: hidden;
+    margin-right: 15rem;
+}
+
+
+    .bigger_header{
+        display: flex;
+        place-content: start;
+        align-items: center;
+        width: 100%;
+        gap: .5rem;
+        padding: 1.5rem .5rem 0 .5rem;
+        font-size: 1rem;
+        cursor: default;
+        
+       
+    }
+        .bigger_header .bi-braces{
+            color: var(--yellow);
+            display: flex;
+            place-content: center;
+            width: fit-content;
+            font-size: 1.3rem;
+        }
+
+        .bigger_header h1{
+            font-size: 1.2rem;
+            font-family: 'Poppins';
+        }
+
+    .bigger_menu{width: 100%;}
+
+    
+    .navigation_area{
+        margin-top: .5rem;
+        border-top: 1px solid var(--divisor_menu_gray);
+        border-bottom: 1px solid var(--divisor_menu_gray);
+        padding: 1rem 0;
+    }
+
+    .menu_desktop_item{
+        gap: 1rem;
+        font-weight: 300;
+    }
+
+    .settings_area{
+        border-bottom: 1px solid var(--divisor_menu_gray);
+        padding: 1rem 0;
+
+    }
+
+    .politics_area{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Poppins';
+        font-size: .8rem;
+    }
+        .link_text{
+            width: 100%;
+            padding: .4rem 1rem;
+        }
+        .link_menu_desktop{
+            color: var(--text_button_disable);
+        }
+
+    /* settings the toggle buttons */
+    .toggle_button{
+        display: flex;
+        width: 2.5rem;
+        height: .9rem;
+        background-color: var(--icon_disable);
+        border-radius: 1rem;
+        transition: ease-in-out color .2s;
+
+        
+    }
+        .toggle_circle{
+            height: 100%;
+            width: .9rem;
+            background-color: var(--button_disable_bg);
+            border-radius: 50%;
+        }
+
+        .toggle_button.ative{
+            background-color: var(--blue_200);
+            transition: ease-in-out color .6s;
+        }
+
+        .toggle_circle.ative{
+            transform: translateX(190%);
+            transition: ease-in-out transform .2s;
+        }
+
+
+
+
+/* setting the main content*/
+.main_content{
+    padding: 1rem 1rem 1rem .8rem;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.about_section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+    .my_history{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .history_content{
+        background-color: var(--blue_300);
+        border-radius: 1rem;
+        padding: 1rem;
+        max-width: 70%;
+        padding: 1rem 1.3rem;
+    }
+
+
+    .hero_text{
+        font-size: clamp(1.6rem, 1.7rem, 1.9rem);
+        margin-bottom: 1rem;
+    }
+    .h2_yellow{ color: var(--yellow);} .h2_blue{ color: var(--blue_200);}
+
+    .h2_myName{
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .animation_dev{
+        font: 400 clamp(1rem, 1.2rem, 1.3rem) 'Fira Code';
+        color: var(--icon_disable);
+        position: relative;
+        width: fit-content;
+        padding-right: .2rem;
+    }
+
+    .text_section{
+        margin-top: 1rem;
+        font-family: 'Arial';
+    }
+
+    .skills_set{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .skills_h4{
+        padding: 1rem 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .skills_list{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+        .skills_list .bi{
+            color: var(--blue_200);
+            font-size: clamp(1.1rem, 1.3rem, 1.5rem);
+        }
+
+    .skill_item{
+        background-color: var(--blue_300);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 1;
+        flex-wrap: nowrap;
+        gap: .5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        cursor: default;
+
+        min-width: max-content;
+    }
+
+    .experience_section{
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 100%;
+    }
+
+    .title_experience{
+        margin-top: 1rem;
+        justify-content: start;
+        padding:1.5rem 0 .5rem 1.5rem;
+    }
+
+    .experience_list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+        gap: .8rem;
+        padding: 1.3rem;
+    }
+
+    .experience_item{
+        background-color: var(--blue_300);
+        display: flex;
+        align-items: stretch;
+        gap: .5rem;
+        width: 100%;
+        border-radius: 2rem;
+        padding: 1rem;
+        border: 2px solid var(--blue_300);
+    } 
+        .experience_item aside{
+            display: flex;
+            width: 8rem;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-right: 2px solid var(--divisor_menu_gray);
+        }
+
+        .experience_text{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: .5rem;
+            margin-left: .4rem;
+        }
+
+        .experience_text h4{
+            color: var(--yellow);
+        }
+
+        .experience_text p{
+            font-size: clamp(.7rem, .9rem, 1rem);
+        }
+
+        .experience_text summary{
+            padding: .5rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            font-family: 'Fira Code';
+            font-size: clamp(.7rem, .9rem, 1rem);
+            background-color: var(--blue_400);
+            cursor: pointer;
+        }
+
+        .experience_item ul{
+            background-color: var(--blue_400);
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            gap: .5rem;
+            list-style-type: circle;
+            list-style-position: inside;
+            font-family: 'Fira Code';
+            font-size:  clamp(.7rem, .9rem, 1rem);;
+
+        }
+
+
+/* projetos */
+.projects_section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.project_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: .5rem;
+    width: 100%;
+}
+
+.project_card_container{
+    display: flex;
+    flex-direction: column;
+    min-width: 15rem;
+    max-width: 20rem;
+    background-color: var(--blue_300);
+    margin-top: 4rem;
+    border-radius: 1.5;
+    padding: 1rem;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 2rem;
+    border: 4px solid var(--blue_300);
+    cursor: default;
+}
+
+.project_card_header{
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    position: relative;
+}
+
+.card_number{
+    display: flex;
+    font-size: 3rem;
+    position: absolute;
+    top: -350%;
+    border: 20px solid var(--blue_400);
+    border-radius: 50%;
+    color: var(--blue_200);
+}
+
+.project_card_content{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: .5rem;
+}
+.project_card_title{
+    font-size: clamp(1.2rem, 1.5rem, 1.7rem);
+}
+.project_card_description{
+    font-size: clamp(.98rem, 1rem, 1rem);
+}
+.button_card{
+    margin-top: 1rem;
+}
+
+/* div temporaria */
+.temporary_div{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row
+}
+.dots_container{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.dot{
+    display: flex;
+    height: .5rem;
+    width: .5rem;
+    border-radius: 50%;
+    background-color: var(--icon_disable)
+}
