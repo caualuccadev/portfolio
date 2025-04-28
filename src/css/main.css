@@ -1,7 +1,7 @@
-@import url(global_configuration.css);
+@import url('../css/global.css');
 
-@import url(animations.css);
+@import url('../css/animations.css');
 
-@import url(styles.css);
+@import url('../css/style.css');
 
-@import url(queries.css);
+@import url('../css/queries.css');
