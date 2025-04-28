@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cauã Lucca</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="main.js"  defer></script>
+    
+</head>
+<body>
+    <div class="elipse_bg" aria-hidden="true">
+        <img src="assets/elipse_bg.svg" aria-hidden="true">
+    </div>
+
+    <header class="header_section" id="home">
+        <aside class="logo_name">
+            <h1 aria-label="Cauã Lucca Developer">caualucca.dev</h1>
+        </aside>
+
+        <nav class="header_navigation">
+            <ul class="desktop_navigation">
+                <li class="desktop_link_container"><a href="#home" class="desktop_link_item">início</a></li>
+                <li class="desktop_link_container"><a href="#sobre" class="desktop_link_item">sobre</a></li>
+                <li class="desktop_link_container"><a href="#projetos" class="desktop_link_item">projetos</a></li>
+                <li class="desktop_link_container"><a href="#servicos" class="desktop_link_item">serviços</a></li>
+            </ul>
+
+            <nav class="desktop_buttons">
+                <button class="primary_button desk_button">Contato</button>
+                <button class="secondary_button button_cv desk_button" aria-label="Baixar Currículo">Baixar CV</button>
+            </nav>
+
+            <i class="bi bi-list menu_button menu_open" role="button" aria-label="Abrir menu" ></i>
+            <ul class="mobile_navigation" aria-expanded="false">
+                <li class="mobile_link_container"><i class="bi bi-x-lg menu_button menu_close" role="button" aria-label="Fechar menu"></i></li>
+                <li class="mobile_link_container"><a href="home" class="mobile_link_item">início</a></li>
+                <li class="mobile_link_container"><a href="sobre" class="mobile_link_item">sobre</a></li>
+                <li class="mobile_link_container"><a href="projetos" class="mobile_link_item">projetos</a></li>
+                <li class="mobile_link_container"><a href="servicos" class="mobile_link_item">serviços</a></li>
+                <li class="mobile_link_container"><a href="contato" class="mobile_link_item">contato</a></li>
+                <li class="mobile_link_container"><a href="pages/curriculo.html" class="mobile_link_item">baixar currículo</a></li>
+
+                <footer class="footer_menu_mobile">
+                    <h2 class="logo_name_mobile_menu" aria-label="Cauã Lucca Developer">caualucca.dev</h2>
+                </footer>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero_section">
+            <section class="hero_content">
+                <h2 class="section_title">Transformando ideias em realidade</h2>
+                <p class="hero_description"><span class="text_emphasis">Desenvolvedor front-end</span> com foco em criação de interfaces
+                digitais inclusivas e adaptáveis.</p>
+
+                <footer class="hero_fotter">
+                    <a href="#servicos" class="primary_button" role="button" aria-label="Ir para serviços">Conheça meus serviços</a>
+                    <a href="#projetos" class="secondary_button" role="button" aria-label="Ir para projetos">Conheça meus projetos</a>
+                </footer>
+            </section>
+
+            <section class="hero_image">
+                <img src="assets/coddy_desktop_smiling.svg" alt="Coddy, um polvo roxo que usa óculos de grau preto que é o meu mascote." srcset="">
+            </section>
+        </section>
+
+        <section class="coddy_presentation">
+            <section class="coddy_image">
+                <img src="assets/cody_desktop_smaliing.svg" alt="Coddy, meu polvo mascote." srcset="">
+                <div class="shadow_coddy"></div>
+            </section>
+
+            <section class="presentation_slider">
+                <section class="presentation_content" >
+                    <section class="presentation_content_container">
+                        <h2 class="section_title">Versátil que nem o Coddy.</h2>
+                        <p class="presentation_description">Experiência em <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets"> CSS</abbr>
+                        e Javascript para <span class="emphasis_text">desenvolvimento web.</span></p>
+                        <p class="presentation_description">Conhecimento em Figma para criação de Identidade Visual e Prototipação</p>
+                    </section>
+                </section>
+
+                <section class="presentation_content" >
+                    <section class="presentation_content_container">
+                        <h2 class="section_title">Adaptável que nem o Coddy.</h2>
+                        <p class="presentation_description">Entregando diversos sites que se adaptam à tela do usuário,
+                            promovendo qualidade na experiência em qualquer dispositivo.
+                        </p>
+                    </section>
+                </section>
+
+                <section class="presentation_content" >
+                    <section class="presentation_content_container">
+                        <h2 class="section_title">Inteligente que nem o Coddy.</h2>
+                        <p class="presentation_description">Pensando sempre em boas soluções de código e design, promovendo
+                            qualidade na experiência do usuário.
+                        </p>
+                    </section>
+                </section>
+
+                <section class="presentation_content" >
+                    <section class="presentation_content_container">
+                        <h2 class="section_title">Criativo que nem o Coddy.</h2>
+                        <p class="presentation_description">Pensando além do óbvio para transformas ideias em experiências
+                            digitais com representatividade.
+                        </p>
+                    </section>
+                </section>
+                 
+                
+            </section><!-- fim do slider -->
+
+            <footer class="presentation_footer" aria-hidden="true">
+                <!-- colocar botões do bootstratp para mexer slide -->
+                <div class="labels_inputs">
+                    <label for="versalite" class="radio_input_custom"></label>
+                    <label for="adaptable" class="radio_input_custom"></label>
+                    <label for="smart" class="radio_input_custom"></label>
+                    <label for="creative" class="radio_input_custom"></label>
+                </div>
+
+                <div class="inputs_slider">
+                    <input type="radio" name="slider" id="versalite" checked class="slider_radios">
+                    <input type="radio" name="slider" id="adaptable" class="slider_radios">
+                    <input type="radio" name="slider" id="smart" class="slider_radios">
+                    <input type="radio" name="slider" id="creative" class="slider_radios">
+                </div>
+
+                
+            </footer>
+        </section>
+
+
+        <section class="about_section" id="sobre">
+            <section class="about_content">
+                <h2 class="section_title">Aprender, criar, transformar</h2>
+                <p class="about_description">
+                    Sou estudante em Engenharia de <lang="en">Software</lang> da Unijorge apaixonado
+                    por tecnologia e aprendizado contínuo. Estou sempre buscando evoluir e acredito que boas 
+                    soluções nascem da combinação entre dedicação, criatividade e empatia.
+                </p>
+
+                <p class="about_description"><span class="text_emphasis">Visão:</span> Me tornar um Engenheiro de Aplicações Web 
+                capaz de criar soluções que façam a diferença no mundo, usando código como ferramenta de impacto positivo.</p>
+            </section>
+
+            <aside class="about_image">
+                <img src="assets/values_desktop.png" alt="Meus valores: Empatia, Ética, Inclusão. Curiosidade" lazyload>
+            </aside>
+
+            <section class="about_experiencies">
+                <header class="experiences_header">
+                    <h3 class="experiences_title">Experiências</h3>
+                    <i class="bi bi-chevron-bar-down experience_icon"></i>
+                </header>
+
+                <section class="experiences_timeline">
+                    <article class="timeline_card">
+                        <h4 class="timeline_card_year"> 2017 - 2023</h4>
+                        <h3 class="timeline_card_job">Designer Digital</h3>
+                        <ul class="timeline_card_habilities">
+                            <li class="hability_item">Design gráfico para redes sociais</li>
+                            <li class="hability_item">Estratégia de conteúdo</li>
+                            <li class="hability_item">Desenvolvimento de pautas de conteúdo</li>
+                            <li class="hability_item">Organização de calendário</li>
+                            <li class="hability_item">Identidade Visual para perfis</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline_card">
+                        <h4 class="timeline_card_year"> 2024 - <i class="bi bi-infinity"></i></h4>
+                        <h3 class="timeline_card_job">Criação de Sites</h3>
+                        <ul class="timeline_card_habilities">
+                            <li class="hability_item">HTML, CSS, JS</li>
+                            <li class="hability_item">HTML semântico</li>
+                            <li class="hability_item">Responsividade</li>
+                            <li class="hability_item">Experiência do Usuário</li>
+                            <li class="hability_item">Design de interface</li>
+                        </ul>
+                    </article>
+                </section>
+            </section>
+
+            <div class="elipse_section" aria-hidden="true"></div>
+
+        </section>
+
+        
+
+
+    </main>
+</body>
+</html>

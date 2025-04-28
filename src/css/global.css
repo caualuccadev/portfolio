@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+/* setting the root colors */
+:root{
+/* colors - visual identity */
+    --purple50: #f2e9ff;
+    --purple100: #d7baff;
+    --purple200: #c499ff;
+    --purple300: #a96bfe;
+    --purple400: #994efe;
+    --purple500: #7f22fe;
+    --purple600: #741fe7;
+    --purple700: #5a18b4;
+    --purple800: #46138c;
+    --purple900: #350e6b;
+
+/* colors - ui tokens */
+    --green_300: #188A42;
+    --green_200: #22C55E;
+    --green_100: #48CF79;
+
+    --red_300: #9A1B1B;
+    --red_200: #DC2626;
+    --red_100: #EB8181;
+
+    --shadow: #21212152;
+    --black_bg: #171617;
+
+/* spacing and sizes */
+    --padding_page: 2rem;
+    --pading_verticals: 1rem;
+    --max_width: 1480px;
+
+}
+
+
+/* reseting defaults and setting global components */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{ scroll-behavior: smooth;}
+
+
+body{
+    background-color: var(--black_bg);
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: 'League Spartan';
+    color: white;
+    display: flex; flex-direction: column; align-items: center;
+}
+
+ul{ list-style-type: none;}
+
+a{ color: white; text-decoration: none;}
+
+.primary_button, .secondary_button{
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 1.5rem;
+    outline: none;
+    border: 2px solid transparent;
+    font-size: clamp(.75rem, .875rem, 1rem); font-weight: 500;
+    text-wrap: nowrap;
+    transition: all ease-in-out .3s;
+}
+
+.primary_button{ background-color: var(--purple500); color: white; }
+
+.secondary_button{
+    background-color: transparent; color: white;
+    border-color: var(--purple500);
+}
+
+.desk_button{ width: 8rem;}
+
+
+main{ width: 100%; max-width: var(--max_width);}
+
+/* global header */
+.header_section{
+    display: flex; align-items: stretch; justify-content: space-between;
+    padding: var(--pading_verticals) var(--padding_page);
+    width: 100%; max-width: var(--max_width);
+    place-self: center;
+    position: relative;
+}
+
+.logo_name{
+    place-content: center; margin-right: 1rem;}
+
+.header_section h1{ font-size: clamp(1.25rem, 1.50rem, 1.75rem); cursor: default;}
+
+.header_navigation{
+    display: flex; align-items: center;
+    width: 100%;
+    flex: 2 1 auto;
+}
+
+.mobile_navigation{
+     flex-direction: column;
+    gap: .5rem;
+    position: absolute; top: 0; right: 0;
+    background-color: var(--purple600);
+    width: 0; height: 0;
+    padding: 0;
+    font-size: clamp(1rem, 1.1rem, 1.2rem);
+    overflow: hidden;
+    transition: all ease-in-out .5s;
+}
+
+.mobile_link_container{
+    display: flex; align-items: center;
+    padding: .5rem 0;
+    font-size: clamp(1.25rem, 1.75rem, 1.3rem);
+    cursor: pointer;
+}
+
+.menu_button{
+    display: flex; align-items: center; justify-content: center;
+    padding: .5rem;
+    font-size: clamp(1.1rem, 1.12rem, 1.2rem);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.menu_open{
+    font-size: clamp(1.25rem, 1.5rem, 1.75rem);
+    display: flex; align-items: center; justify-content: end;
+    width: 100%; border-radius: 0;
+}
+
+.logo_name_mobile_menu{
+    text-align: center; padding: .75rem 0;
+    margin-top: 2rem;
+    cursor: default;
+}
+
+
+/* larger tablets menu navigation*/
+.desktop_buttons{
+    display: flex; align-items: stretch;justify-content: end;
+    width: 100%;
+    gap: 2rem;
+    flex: 1 0 0;
+}
+
+/* desktop navigation */
+.desktop_navigation{
+    display: flex;
+    align-items: stretch; justify-content: center; justify-self: center;
+    gap: 1.5rem;
+    font-size: clamp(1rem, 1.3rem, 1.5rem);
+    width: 100%;
+}
+
+.desktop_link_container{ display: flex; height: 100%;}
+
+.desktop_link_item{ padding: .5rem .75rem; position: relative; transition: all ease-in-out .2s;}
+
+.desktop_link_item::after{
+    content: ''; width: 0; height: 0;
+    position: absolute; bottom: 0; left: 0;
+    background-color: var(--purple500);
+    transition: all ease-in-out .3s;
+}
+
+
