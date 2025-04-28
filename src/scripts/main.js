@@ -66,7 +66,7 @@ function clicker_toggle_experiences(){
     const icon_experience = document.querySelector('.experience_icon');
     const experience_section = document.querySelector('.experiences_timeline');
     const cards_experience = document.querySelectorAll('.timeline_card')
-    const content_expanded = false;
+    const content_expanded = button_experience.getAttribute('aria-expanded');
     let counter_clicks = 0;
 
     button_experience.addEventListener('click', ()=>{
@@ -75,9 +75,13 @@ function clicker_toggle_experiences(){
         if(counter_clicks % 2 == 0){
             icon_experience.style.transform = 'rotate(360deg)';
             experience_section.classList.remove('expanded');
+
             cards_experience.forEach(card => {
                 card.classList.remove('displayed')
             });
+
+            content_expanded = false;
+
 
         } else{
             
@@ -89,6 +93,7 @@ function clicker_toggle_experiences(){
             });
 
             experience_section.scrollIntoView({behavior: 'smooth'});
+            content_expanded = true;
         };
 
     });
