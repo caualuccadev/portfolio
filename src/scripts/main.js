@@ -83,12 +83,15 @@ function clicker_toggle_experiences(){
             
             icon_experience.style.transform = 'rotate(180deg)';
             experience_section.classList.add('expanded');
-            cards_experience.forEach(card => {
-                card.classList.add('displayed')
-            });
-        }
 
-    })
+            cards_experience.forEach(card => {
+                card.classList.add('displayed');
+            });
+
+            experience_section.scrollIntoView({behavior: 'smooth'});
+        };
+
+    });
 }
 
 // funções de animação 
