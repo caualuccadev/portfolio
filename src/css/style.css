@@ -1,4 +1,4 @@
-@import url(global_configuration.css);
+@import url('global_configuration.css');
 
 
 /* header styles */
@@ -236,15 +236,13 @@
 .timeline_card_job{ font-size: clamp(1.2rem, 1.5vw, 1.5rem); }
 
 .timeline_card_habilities{
-    display: flex; flex-wrap: wrap;
-    align-items: stretch; justify-content: space-between;
+    display: grid; grid-template-columns: 1fr 1fr;
     gap: 1rem; margin-top: 1rem;
     height: fit-content;
 }
 
 .hability_item{
-    flex: 1;
-    padding: .5rem;
+    padding: .5rem; place-content: center;
     border-left: 2px solid white;
     line-height: 1.3rem;
 

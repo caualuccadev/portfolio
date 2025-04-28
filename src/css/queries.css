@@ -25,6 +25,8 @@
         flex-direction: column;
     }
 
+    .timeline_card_habilities{ grid-template-columns: auto;}
+
     .timeline_card::after{ left: 100%; top: 50%; transform: translate(0, -50%)}
 
     .timeline_card::after{height: 2px; width: 2rem;}
@@ -114,4 +116,7 @@
     /* about section */
     .about_section{flex-direction: row;}
     .about_image{place-content: end;}
+
+    /* time line card - habilities */
+    .timeline_card_habilities{ grid-template-columns: 1fr 1fr 1fr;}
 }
