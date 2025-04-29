@@ -99,18 +99,14 @@ function clicker_toggle_experiences(){
     });
 }
 
+
+
 // funções de animação 
 function animator_slider(){
     const slides = document.querySelectorAll('.presentation_content');
     const slider_buttons = document.querySelectorAll('.radio_input_custom');
     const slider_radios = document.querySelectorAll('.slider_radios');
     let input_index = 0;
-
-
-    // testando
-    const radios_obj = {}
-
-    
 
     // alternando os botões conforme input ativado no momento
     slider_radios.forEach((input, index) => {
@@ -147,6 +143,7 @@ function animator_slider(){
     });
     
 
+    // alternando atributo aria 
     slider_radios.forEach(radio =>{
         radio.addEventListener('change', () =>{
             
@@ -154,23 +151,19 @@ function animator_slider(){
             slider_radios.forEach(input =>{
                 if(input.checked){
                     input.setAttribute('aria-checked', 'true');
-                    radios_obj[`${input.getAttribute('id')}`] = `${input.getAttribute('aria-checked')}`;
+                    
                 } else{
                     input.setAttribute('aria-checked', 'false');
-                    radios_obj[`${input.getAttribute('id')}`] = `${input.getAttribute('aria-checked')}`;
                 }
             });
 
-
-            console.log(radios_obj)
         });
         
 
 
     });
-    // alteração de forma automática 
 
-}
+};
 
 
 
