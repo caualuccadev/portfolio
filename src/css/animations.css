@@ -1,4 +1,4 @@
-@import url(styles.css);
+@import url('style.css');
 
 /* desktop nav microinteractions */
 .desktop_link_item:hover::after{ width: 100%; height: 2px;}

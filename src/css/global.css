@@ -15,6 +15,8 @@
     --purple800: #46138c;
     --purple900: #350e6b;
 
+    --linearBackground: linear-gradient(20deg, var(--purple900), var(--purple500));
+
 /* colors - ui tokens */
     --green_300: #188A42;
     --green_200: #22C55E;
