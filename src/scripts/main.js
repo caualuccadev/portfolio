@@ -102,10 +102,15 @@ function clicker_toggle_experiences(){
 // funções de animação 
 function animator_slider(){
     const slides = document.querySelectorAll('.presentation_content');
-    let slide_width = slides.scrollWidth;
     const slider_buttons = document.querySelectorAll('.radio_input_custom');
     const slider_radios = document.querySelectorAll('.slider_radios');
     let input_index = 0;
+
+
+    // testando
+    const radios_obj = {}
+
+    
 
     // alternando os botões conforme input ativado no momento
     slider_radios.forEach((input, index) => {
@@ -113,12 +118,12 @@ function animator_slider(){
             if(input.checked){
                 input_index = index;
                 slider_buttons.forEach(button => {
-                    button.classList.remove('active')
+                    button.classList.remove('active');
 
                 });
                 // para deixar marcado ao alterar
-                slider_buttons[input_index].classList.add('active')
-            }
+                slider_buttons[input_index].classList.add('active');
+            };
         })
         // para deixar marcado assim que a pagina carrega
         slider_buttons[input_index].classList.add('active')
@@ -130,18 +135,41 @@ function animator_slider(){
             if(radio.checked){
                 input_index = index
                 slides.forEach(slide => {
-                    slide.classList.remove('slide_show')
+                    slide.classList.remove('slide_show');
                 });
 
-                slides[input_index].classList.add('slide_show')
-                
-                
-            }
-            
+                slides[input_index].classList.add('slide_show');
+            };
+
         });
-        slides[input_index].classList.add('slide_show')
+        slides[input_index].classList.add('slide_show');
         
-    })
+    });
+    
+
+    slider_radios.forEach(radio =>{
+        radio.addEventListener('change', () =>{
+            
+
+            slider_radios.forEach(input =>{
+                if(input.checked){
+                    input.setAttribute('aria-checked', 'true');
+                    radios_obj[`${input.getAttribute('id')}`] = `${input.getAttribute('aria-checked')}`;
+                } else{
+                    input.setAttribute('aria-checked', 'false');
+                    radios_obj[`${input.getAttribute('id')}`] = `${input.getAttribute('aria-checked')}`;
+                }
+            });
+
+
+            console.log(radios_obj)
+        });
+        
+
+
+    });
+    // alteração de forma automática 
+
 }
 
 

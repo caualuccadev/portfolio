@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cauã Lucca</title>
 
-    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/main.css" >
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <script src="src/scripts/main.js"  defer></script>
+    <script src="src/scripts/main.js" defer></script>
     
 </head>
 <body>
@@ -71,16 +71,17 @@
         </section>
 
         <section class="coddy_presentation">
-            <section class="coddy_image">
+            <aside class="coddy_image" aria-hidden="true">
                 <img src="src/assets/cody_desktop_smaliing.svg" alt="Coddy, meu polvo mascote." srcset="">
                 <div class="shadow_coddy"></div>
-            </section>
+            </aside>
 
-            <section class="presentation_slider">
-                <section class="presentation_content" >
-                    <section class="presentation_content_container">
+            <section class="presentation_slider"  aria-live="polite">
+
+                <section class="presentation_content" aria-labelledby="versatil">
+                    <section class="presentation_content_container" id="versatil">
                         <h2 class="section_title">Versátil que nem o Coddy.</h2>
-                        <p class="presentation_description">Experiência em <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets"> CSS</abbr>
+                        <p class="presentation_description">Experiência em HTML, CSS
                         e Javascript para <span class="emphasis_text" aria-hidden="true">desenvolvimento web.</span></p>
                         <p class="presentation_description">Conhecimento em Figma para criação de Identidade Visual e Prototipação</p>
                     
@@ -90,8 +91,8 @@
 
                 </section>
 
-                <section class="presentation_content" >
-                    <section class="presentation_content_container">
+                <section class="presentation_content" aria-labelledby="adaptavel">
+                    <section class="presentation_content_container" id="adaptavel">
                         <h2 class="section_title">Adaptável que nem o Coddy.</h2>
                         <p class="presentation_description">Entregando diversos sites que se adaptam à tela do usuário,
                             promovendo qualidade na experiência em qualquer dispositivo.
@@ -99,8 +100,8 @@
                     </section>
                 </section>
 
-                <section class="presentation_content" >
-                    <section class="presentation_content_container">
+                <section class="presentation_content" aria-labelledby="inteligente">
+                    <section class="presentation_content_container" id="inteligente">
                         <h2 class="section_title">Inteligente que nem o Coddy.</h2>
                         <p class="presentation_description">Pensando sempre em boas soluções de código e design, promovendo
                             qualidade na experiência do usuário.
@@ -108,8 +109,8 @@
                     </section>
                 </section>
 
-                <section class="presentation_content" >
-                    <section class="presentation_content_container">
+                <section class="presentation_content" aria-labelledby="criativo">
+                    <section class="presentation_content_container" id="criativo">
                         <h2 class="section_title">Criativo que nem o Coddy.</h2>
                         <p class="presentation_description">Pensando além do óbvio para transformas ideias em experiências
                             digitais com representatividade.
@@ -120,20 +121,20 @@
                 
             </section><!-- fim do slider -->
 
-            <footer class="presentation_footer" aria-hidden="true">
-                <!-- colocar botões do bootstratp para mexer slide -->
+            <footer class="presentation_footer">
+
                 <div class="labels_inputs">
-                    <label for="versalite" class="radio_input_custom"></label>
-                    <label for="adaptable" class="radio_input_custom"></label>
-                    <label for="smart" class="radio_input_custom"></label>
-                    <label for="creative" class="radio_input_custom"></label>
+                    <label for="versalite" class="radio_input_custom" aria-label="Navegar para o slide Versátil que nem o Coddy" role="button"></label>
+                    <label for="adaptable" class="radio_input_custom" aria-label="Navegar para o slide Adaptável que nem o Coddy" role="button"></label>
+                    <label for="smart" class="radio_input_custom" aria-label="Navegar para o slide Inteligente que nem o Coddy" role="button"></label>
+                    <label for="creative" class="radio_input_custom" aria-label="Navegar para o slide Criativo que nem o Coddy" role="button"></label>
                 </div>
 
                 <div class="inputs_slider">
-                    <input type="radio" name="slider" id="versalite" checked class="slider_radios">
-                    <input type="radio" name="slider" id="adaptable" class="slider_radios">
-                    <input type="radio" name="slider" id="smart" class="slider_radios">
-                    <input type="radio" name="slider" id="creative" class="slider_radios">
+                    <input type="radio" name="slider" id="versalite" checked aria-checked="true" class="slider_radios" aria-controls="versatile_slide">
+                    <input type="radio" name="slider" id="adaptable" checked aria-checked="false"  class="slider_radios" aria-controls="adaptable_slide">
+                    <input type="radio" name="slider" id="smart" checked aria-checked="false" class="slider_radios" aria-controls="smart_slide">
+                    <input type="radio" name="slider" id="creative" checked aria-checked="false" class="slider_radios" aria-controls="creative_slide">
                 </div>
 
                 
