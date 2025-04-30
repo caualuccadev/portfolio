@@ -39,3 +39,6 @@
     color: var(--purple500);
     border-color: var(--purple500);
 }
+
+/* social media */
+.socialmedia_item:hover{color: var(--purple300);}
