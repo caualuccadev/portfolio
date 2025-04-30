@@ -470,10 +470,11 @@
 }
 
 .textType_input, #userMessage_input{
-    padding: .25rem .5rem; height: 30px;
+    padding: .5rem; height: 35px;
     border-radius: .5rem; border: none;
     outline-offset: .25rem; outline-width: .5rem; 
     outline-color: white;
+    font-size: clamp(1.3rem, 1.3vw, 1.5rem);
 }
 
 #userMessage_input{
@@ -481,6 +482,12 @@
     resize: none;
 }
 
+.triggerMessage{
+    margin: .5rem 0; padding: .5rem;
+    width: 100%;
+    border-radius: .5rem; 
+    font-weight: bold; font-size: clamp(1.3rem, 1.3vw, 1.5rem);
+}
 .form_button{
     width: 100%;
     font-weight: 700; font-size: clamp(1rem, 1.2vw, 1.5rem);

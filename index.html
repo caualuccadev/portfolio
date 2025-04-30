@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cauã Lucca</title>
+    <title>Cauã Lucca - Portfólio</title>
 
     <link rel="stylesheet" href="src/css/main.css" >
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <script src="src/scripts/main.js" defer></script>
+    <script src="src/scripts/main.js" defer type="module"></script>
     
 </head>
 <body>
@@ -38,11 +38,11 @@
             <i class="bi bi-list menu_button menu_open" role="button" aria-label="Abrir menu" ></i>
             <ul class="mobile_navigation" aria-expanded="false">
                 <li class="mobile_link_container"><i class="bi bi-x-lg menu_button menu_close" role="button" aria-label="Fechar menu"></i></li>
-                <li class="mobile_link_container"><a href="home" class="mobile_link_item">início</a></li>
-                <li class="mobile_link_container"><a href="sobre" class="mobile_link_item">sobre</a></li>
-                <li class="mobile_link_container"><a href="projetos" class="mobile_link_item">projetos</a></li>
-                <li class="mobile_link_container"><a href="servicos" class="mobile_link_item">serviços</a></li>
-                <li class="mobile_link_container"><a href="contato" class="mobile_link_item">contato</a></li>
+                <li class="mobile_link_container"><a href="#home" class="mobile_link_item">início</a></li>
+                <li class="mobile_link_container"><a href="#sobre" class="mobile_link_item">sobre</a></li>
+                <li class="mobile_link_container"><a href="#projetos" class="mobile_link_item">projetos</a></li>
+                <li class="mobile_link_container"><a href="#servicos" class="mobile_link_item">serviços</a></li>
+                <li class="mobile_link_container"><a href="#contato" class="mobile_link_item">contato</a></li>
                 <li class="mobile_link_container"><a href="pages/curriculo.html" class="mobile_link_item">baixar currículo</a></li>
 
                 <footer class="footer_menu_mobile">
@@ -295,21 +295,21 @@
 
             <form action="submit" method="get" class="form_container">
                 <label for="name" class="label" id="userName">
-                    <input type="text" name="name" id="userName_input" class="textType_input">
+                    <input type="text" name="name" id="userName_input" class="textType_input" required>
                     <p class="labelDescription">Nome</p>
                 </label>
 
                 <label for="email" class="label" id="userEmail">
-                    <input type="email" name="email" id="userEmail_input" class="textType_input">
+                    <input type="email" name="email" id="userEmail_input" class="textType_input" required>
                     <p class="labelDescription">Email</p>
                 </label>
 
                 <label for="message" class="label" id="userMessage">
-                    <textarea name="message" id="userMessage_input" max-lenght="350"></textarea>
+                    <textarea name="message" id="userMessage_input" max-lenght="350" required></textarea>
                     <p class="labelDescription labelTextarea">Escreva sua mensagem</p>
                 </label>
 
-                <article class="triggerMessage" aria-errormessage="Complete os campos acima."></article>
+                <article class="triggerMessage"></article>
 
                 <button class="primary_button form_button" type="submit">Enviar</button>
 

@@ -37,18 +37,14 @@
 
 
     /* projects area */
-    .select_sitesProjects{
-        padding: 1rem;
-    }
+    .select_sitesProjects{ padding: 1rem; }
 
     .projects_container{grid-template-columns: 1fr; grid-template-rows: auto;}
     .challanges_solutions{flex-direction: column;}
 
 
     /* contact area */
-    .contact_section{
-        flex-direction: column;
-    }
+    .contact_section{ flex-direction: column; }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px){

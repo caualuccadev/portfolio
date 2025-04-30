@@ -18,13 +18,13 @@
     --linearBackground: linear-gradient(20deg, var(--purple900), var(--purple500));
 
 /* colors - ui tokens */
-    --green_300: #188A42;
-    --green_200: #22C55E;
-    --green_100: #48CF79;
+    --green300: #188A42;
+    --green200: #22C55E;
+    --green100: #48cf7adc;
 
-    --red_300: #9A1B1B;
-    --red_200: #DC2626;
-    --red_100: #EB8181;
+    --red300: #9A1B1B;
+    --red200: #DC2626;
+    --red100: #EB8181;
 
     --shadow: #21212152;
     --black_bg: #171617;

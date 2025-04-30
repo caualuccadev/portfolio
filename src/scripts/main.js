@@ -1,3 +1,6 @@
+import { trigger_message, nameValidation } from "./contactForm.js";
+
+
 // funções para aprimorar a responsividade 
 function watcher_coddy_dimensions(){
     // ajeitar os elementos do container conforme as dimensões da imagem
@@ -179,6 +182,24 @@ window.addEventListener('load', () =>{
     watcher_coddy_dimensions();
     animator_slider();
     clicker_toggle_experiences();
+
+    // checando as validações de input 
+    
+
+    const nameInput = document.querySelector("#userName_input");
+
+    nameInput.addEventListener('input', (event) =>{
+        nameValidation();
+        let message = ''
+
+        if(nameValidation() === 'invalid'){
+            message = 'Oops! Acho que você digitou algo errado no nome.'
+
+            trigger_message('error', message, "#userName_input")
+        }else{
+            trigger_message('valid', '', "#userName_input")
+        }
+    });
 })
 
 

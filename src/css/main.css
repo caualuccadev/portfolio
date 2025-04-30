@@ -1,7 +1,11 @@
 @import url('global.css');
 
-@import url('animations.css');
+@import url('queries.css');
 
 @import url('style.css');
 
-@import url('queries.css');
+
+
+@import url('dinamicStyles.css');
+
+@import url('animations.css');
