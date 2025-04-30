@@ -243,9 +243,83 @@
             </main> <!-- fim da main de projetos  -->
         </section>
 
+        <section class="services_section" id="servicos">
+            
+            <header class="services_header">
+                <h2 class="section_title">Tentáculos à disposição</h2>
+                <p class="section_description servicesDescription">Soluções digitais sob medidas para dar vida às suas ideias com flexibilidade, criatividade e técnica. </p>
+            </header>
+
+            <section class="services_container">
+                <article class="services_card">
+                    <h3 class="servicesCard_title">Landing Pages</h3>
+                    <p class="servicesCard_description">Sites de páginas únicas perfeitas para marketing de conteúdo e divulgação de produtos e serviços.</p>
+
+                    <button class="primary_button servicesButtons">Pedir orçamento</button>
+                </article>
+
+                <article class="services_card">
+                    <h3 class="servicesCard_title">Sites Institucionais</h3>
+                    <p class="servicesCard_description">Ideais para você promover seu negócio com forte presença online, ganhando mais confiança dos seus clientes.</p>
+
+                    <button class="primary_button servicesButtons">Pedir orçamento</button>
+                </article>
+
+                <article class="services_card">
+                    <h3 class="servicesCard_title">Consultorias</h3>
+                    <p class="servicesCard_description">Consultoria personalizada para para quem quer repensar, disponibilizar, acessibilizar ou até reformular seu site, mesmo sem entender de tecnologia.</p>
+
+                    <button class="primary_button servicesButtons">Pedir orçamento</button>
+                </article>
+
+                <article class="services_card">
+                    <h3 class="servicesCard_title">Projetos Sociais</h3>
+                    <p class="servicesCard_description">Desenvolvimento de sites de forma gratuita para projetos sociais e ONG's. Aumente a visibilidade da sua causa!</p>
+
+                    <button class="primary_button servicesButtons">Pedir orçamento</button>
+                </article>
+
+            </section>
+
+            <div class="elipse_services" aria-hidden="true">
+                <img src="src/assets/elipse_bg.svg" alt="" srcset="">
+            </div>
+        </section> <!-- fim de serviços -->
+
+        <section class="contact_section" id="contato">
+            <header class="contact_header">
+                <h2 class="section_title">Sua menssagem, minha próxima missão.</h2>
+                <p class="section_description services_description">Entre em contato para solicitar um orçamento, tirar dúvidas e contratar serviços.</p>
+            </header>
+
+
+            <form action="submit" method="get" class="form_container">
+                <label for="name" class="label" id="userName">
+                    <input type="text" name="name" id="userName_input" class="textType_input">
+                    <p class="labelDescription">Nome</p>
+                </label>
+
+                <label for="email" class="label" id="userEmail">
+                    <input type="email" name="email" id="userEmail_input" class="textType_input">
+                    <p class="labelDescription">Email</p>
+                </label>
+
+                <label for="message" class="label" id="userMessage">
+                    <textarea name="message" id="userMessage_input" max-lenght="350"></textarea>
+                    <p class="labelDescription labelTextarea">Escreva sua mensagem</p>
+                </label>
+
+                <article class="triggerMessage" aria-errormessage="Complete os campos acima."></article>
+
+                <button class="primary_button form_button" type="submit">Enviar</button>
+
+            </form>
+        </section>
+
 
     </main>
 
-    <footer class="footerSite"></footer>
+    <footer class="footerSite">
+    </footer>
 </body>
 </html>
