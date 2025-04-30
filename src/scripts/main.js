@@ -49,7 +49,8 @@ function watcher_coddy_dimensions(){
 function clicker_toggle_menu(){
     const open_menu = document.querySelector('.menu_open');
     const menu_mobile = document.querySelector('.mobile_navigation');
-    const close_menu = document.querySelector('.menu_close')
+    const close_menu = document.querySelector('.menu_close');
+    const menuItems = document.querySelectorAll(".mobile_link_container");
 
     open_menu.addEventListener('click', ()=>{
         menu_mobile.style.width = '100%';
@@ -61,7 +62,15 @@ function clicker_toggle_menu(){
         menu_mobile.style.width = '0';
         menu_mobile.style.height = '0';
         menu_mobile.style.padding = '0';
-    })
+    });
+
+    menuItems.forEach(item =>{
+        item.addEventListener('click', () =>{
+            menu_mobile.style.width = '0';
+            menu_mobile.style.height = '0';
+            menu_mobile.style.padding = '0';
+        })
+    });
 }
 
 function clicker_toggle_experiences(){
